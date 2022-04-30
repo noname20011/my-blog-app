@@ -1,0 +1,166 @@
+.createBlog {
+    flex: 9;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 7px;
+}
+
+.postImg_wrapper {
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    height: 400px;
+    background-color: rgb(220, 220, 220);
+    border-radius: 2px;
+}
+
+.postImg_layout {
+    width: 90%;
+    height: 90%;
+    border: 2px solid rgb(96, 96, 96);
+    border-style: dotted;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.postImg_img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.postImg_img>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.btnDelete_img {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    border: none;
+    outline: none;
+    padding: 10px;
+    border-radius: 50%;
+    background-color: rgb(250, 21, 21);
+    cursor: pointer;
+    transition: background-color .2s ease-out;
+}
+
+.btnDelete_img:hover {
+    background-color: rgb(250, 109, 21);
+}
+
+.postImg_layout>label>div>div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+.postImg_layout>label>div>input {
+    height: 0;
+    width: 0;
+}
+
+.postImg_recommend {
+    margin-top: 10px;
+    text-align: center;
+    width: 200px;
+    color: teal;
+}
+
+.createForm {
+    position: relative;
+}
+
+.writeFormGroup {
+    margin-left: 50px;
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.writeInput {
+    font-size: 30px;
+    padding: 10px;
+    width: 100%;
+    border: 1px solid gray;
+    border-radius: 4px;
+}
+
+.writeInput::placeholder {
+    color: rgb(189, 185, 185);
+    font-weight: 400;
+}
+
+.writeInput:focus {
+    outline-style: none;
+}
+
+.writeText {
+    width: 100%;
+    height: 20vh;
+    resize: none;
+    font-family: inherit;
+    font-size: 16px;
+}
+
+.writeSubmit {
+    margin-top: 40px;
+    color: white;
+    float: right;
+    text-align: center;
+    background-color: teal;
+    padding: 10px 40px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.btn-left {
+    margin-right: 10px;
+    background-color: rgb(251, 145, 31);
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 16px;
+}
+
+.title-res {
+    display: none;
+}
+
+@media screen and (max-width: 678px) {
+    .createBlog {
+        width: 100%;
+        text-align: center;
+    }
+
+    .postImg_wrapper {
+        width: 100%;
+    } 
+
+    .writeFormGroup {
+        margin-left: 0;
+    }
+
+    .writeSubmit {
+        width: 100%;
+        justify-content: center ;
+    }
+
+    .title-res {    
+        display: inline-block;
+        margin-bottom: 10px;
+        font-size: 28px;
+        color: #444;
+    }
+}

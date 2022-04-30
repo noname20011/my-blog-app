@@ -1,0 +1,27 @@
+.posts_section {
+    flex: 9;
+    padding: 0 20px;
+    position: relative;
+}
+
+.posts_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.btn-writeBlog {
+    display: inline-block;
+    padding: 12px 20px;
+    margin-top: 10px;
+    background: rgb(245, 77, 77);
+    color: #fff;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+@media screen and (max-width: 678px) {
+    .posts_section {
+        width: 100%;
+    }
+}

@@ -1,0 +1,125 @@
+.login {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(
+        rgba(255, 255, 255, 0.5),
+        rgba(255, 255, 255, 0.5)
+    ),
+    url("https://images.pexels.com/photos/768473/pexels-photo-768473.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500");
+    background-size: cover;
+}
+
+.login_layout {
+    text-align: center;
+    width: 400px;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 4px;
+}
+
+.loginTitle {
+    font-size: 50px;
+    color: teal;
+}
+
+.loginForm {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.loginForm > label {
+    text-align: left;
+    margin: 10px 0;
+    color: lightcoral;
+}
+
+.loginInput {
+    padding: 10px;
+    background-color: white;
+    border: none;
+    border-bottom: 1px solid teal;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+.loginInput::placeholder {
+    color: teal;
+}
+
+.loginInput:focus {
+    outline: none;
+}
+
+.loginButton {
+    margin-top: 20px;
+    cursor: pointer;
+    background-color: teal;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.loginGoogleButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 10px;
+    background-color: rgb(240, 151, 103);
+    cursor: pointer;
+    padding: 10px 20px; 
+    border: none;
+    color: #fff;
+    margin-top: 10px;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.loginRegisterButton {
+    background-color: lightcoral;
+    cursor: pointer;
+    padding: 10px 20px; 
+    border: none;
+    color: white;
+    margin-top: 10px;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.option-login {
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Lora", sans-serif;
+}
+
+.option-login::before {
+    content: "";
+    margin: 0 14px;
+    height: 1px;
+    width: 40%;
+    border-bottom: 1px solid #444;
+}
+
+.option-login::after {
+    content: "";
+    margin: 0 14px;
+    height: 1px;
+    width: 40%;
+    border-bottom: 1px solid #444;
+}
+
+@media screen and (max-width: 678px) {
+
+
+    .login_layout {
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+}

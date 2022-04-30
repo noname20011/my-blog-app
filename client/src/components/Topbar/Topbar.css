@@ -1,0 +1,238 @@
+.topbar {
+    position: sticky;
+    background: #fff;
+    z-index: 1000;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    box-shadow: 1px .5px 4px rgba(0, 0, 0, 0.1 );
+    margin: 0 auto;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.topbar_wrapper {
+    max-width: 1100px;
+    height: inherit;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.topbar_left, .topbar_right {
+    flex: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 2rem;
+}
+
+.topbar_left>a>i {
+    font-size: 24px;
+    cursor: pointer;
+    color: #444;
+    transition: .3s ease-out;
+}
+
+.topbar_left>i:hover {
+    opacity: 0.7;
+    transform: scale(1.1);
+}
+
+.topbar_center {
+    flex: 6;
+}
+
+.topbar_center>ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 24px;
+    font-weight: 300;
+}
+
+.topbar_center>ul>li>a {
+    color: #444;
+}
+
+.topbar_right>.user>img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ccc;
+    cursor: pointer;
+}
+
+.topbar_right>.user {
+    position: relative;
+}
+
+.topbar_right>.user>.option::after {
+    content: " ";
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    width: 0;
+    height: 0;
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent;
+    border-bottom: 10px solid rgb(247, 245, 245);;   
+}
+
+
+.topbar_right>.user>.option {
+    position: absolute;
+    width: 120px;
+    background: rgb(247, 245, 245);
+    padding: 10px;
+    bottom: -64px;
+    cursor: pointer;
+    border-radius: 4px;
+    box-shadow: 2px 1px 2px rgba(0, 0, 0, 0.3 );
+}
+
+.topbar_right>.user>img:hover .topbar_right>.user>div {
+    display: block;
+}
+
+.topbar_right>.user>div>ul>li {
+    font-size: 16px;
+    width: 100%;
+    display: inline-block;
+    color: #444;
+    padding: 6px 12px;
+    cursor: pointer;
+    font-weight: 300 ;
+}
+
+
+.topbar_right>i {
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.btn {
+    padding: 12px 20px;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    color: rgba(239, 101, 101, 0.8);
+    background: bisque;
+    text-transform: uppercase;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.menu-icon, 
+.app-title,
+.close-icon,
+.social-res,
+.username-res {
+    display: none;
+}
+
+
+@media screen and (max-width: 768px) {
+    .topbar {
+        z-index: 1100;
+        top: 0;
+        height: 80px;
+        width: 100%;
+        background-color: rgb(251, 237, 221);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+    }
+
+    .menu-icon {
+        display: inline-block;
+        font-size: 28px;
+    }
+
+    .app-title {
+        display: inline-block;
+        font-size: 40px;
+        font-weight: 300;
+        font-family: 'Square Peg', cursive;
+    }
+
+
+    .topbar_wrapper {
+        position: fixed;
+        z-index: 1000;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 80%;
+        height: 100%;
+        background-color: #fff;
+        border-top-right-radius: 7px;
+        border-bottom-right-radius: 7px;
+        box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.1 );
+        display: none;
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        padding-left: 20px ;
+        transition: all .5s ease-out;
+    }
+
+    .topbar_left {
+        align-items: flex-end;
+        margin-bottom: 30px;
+        column-gap: 20px;
+    }
+    .topbar_center {
+        width: 100%;
+    }
+
+    .topbar_center>ul {
+        flex-direction: column;
+        align-items: flex-start;
+        row-gap: 16px;
+        width: 100%;
+    }
+
+    .topbar_center>ul>li {
+        display: inline-block;
+        padding: 6px 10px;
+        width: 100%;
+    }
+
+    .topbar_center>ul>li.active {
+        border-right: 4px solid rgb(246, 75, 72);
+    }
+
+    .topbar_center>ul>li.active>a {
+        color: rgb(246, 75, 72);
+    }
+
+    .close-icon {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 30px;
+        color: rgb(253, 39, 39);
+    }
+
+    .social-res { 
+        display: inline-block;
+    }
+
+    .topbar_right {
+        padding: 0 20px;
+        width: 100%;
+        justify-content: space-between;
+    }
+    .user {
+        display: flex;
+        align-items: center;
+        column-gap: 20px;
+    }
+    .username-res {
+        display: block;
+        font-size: 20px;
+        font-weight: 300;
+    }
+}
