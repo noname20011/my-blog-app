@@ -20,11 +20,11 @@ const Login = () => {
         fetchLogin()
     }
 
-    const responseLoginGoogle = (res) => {
-        localStorage.setItem('user', JSON.stringify({data: res.profileObj, tokenId: res.tokenId}))
-        console.log(res);
-        navigate('/')
-    }
+    // const responseLoginGoogle = (res) => {
+    //     localStorage.setItem('user', JSON.stringify({data: res.profileObj, tokenId: res.tokenId}))
+    //     console.log(res);
+    //     navigate('/')
+    // }
 
     return (
         <div className="login">
@@ -42,7 +42,7 @@ const Login = () => {
                     <button className="loginButton" onClick={handleLogin}>Login</button>
                 </form>
                 <span className='option-login'>OR</span>
-                <GoogleLogin
+                {/* <GoogleLogin
                     clientId='43479753631-1f4bkoouumnsnocu2qiqsi10i5glr6sg.apps.googleusercontent.com'
                     render={(renderProps => (
                         <button type='button' className='loginGoogleButton' 
@@ -52,7 +52,7 @@ const Login = () => {
                     ))}
                     onSuccess={responseLoginGoogle}
                     onFailure={responseLoginGoogle}
-                    cookiePolicy='single_host_origin'/>
+                    cookiePolicy='single_host_origin'/> */}
                 <Link to={'/register'}>
                     <button className="loginRegisterButton">Register</button>
                 </Link>
