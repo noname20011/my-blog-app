@@ -1,18 +1,18 @@
 import axios from 'axios'
 
 export const apiAuth = axios.create(({
-    baseURL: 'http://localhost:5000/auth'
+    baseURL: 'https://myblogappreact.herokuapp.com/auth'
 }))
 
 export const apiUser = axios.create(({
-    baseURL: 'http://localhost:5000/user'
+    baseURL: 'https://myblogappreact.herokuapp.com/user'
 }))
 
 export const apiBlog = axios.create(({
-    baseURL: 'http://localhost:5000/blogs'
+    baseURL: 'https://myblogappreact.herokuapp.com/blogs'
 }))
 export const apiCategory = axios.create(({
-    baseURL: 'http://localhost:5000/category'
+    baseURL: 'https://myblogappreact.herokuapp.com/category'
 }))
 
 apiAuth.interceptors.request.use((req) => {
