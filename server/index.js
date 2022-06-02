@@ -20,6 +20,9 @@ app.use('/blogs', blogRouters)
 app.use('/auth', authRouters)
 app.use('/user', userRouters)
 app.use('/category', categoryRouters)
+app.get('/', (req, res) => {
+    res.send('App is running!')
+})
 
 mongoose.connect(process.env.CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => app.listen(PORT, () => console.log('Server running on: ' + PORT)))
