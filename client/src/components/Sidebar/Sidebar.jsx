@@ -3,14 +3,14 @@ import './Sidebar.css'
 import AboutImg from '../../asset/about me 1.jpg'
 
 const Sidebar = () => {
-    window.onscroll = (e) => {
-        const sidebar = document.querySelector('.about')
-        if(e.target.defaultView.pageYOffset + 30 > sidebar.offsetTop) {
-            console.log(123);
-            sidebar.style.top = `120px`;
-            sidebar.style.position = 'sticky'
-        }
-    }
+    // window.onscroll = (e) => {
+    //     const sidebar = document.querySelector('.about')
+    //     if(e.target.defaultView.pageYOffset + 30 > sidebar.offsetTop) {
+    //         console.log(123);
+    //         sidebar.style.top = `120px`;
+    //         sidebar.style.position = 'sticky'
+    //     }
+    // }
 
     return (
         <div className='about'>

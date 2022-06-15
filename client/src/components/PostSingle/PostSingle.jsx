@@ -2,17 +2,15 @@ import React from 'react'
 import './PosstSingle.css'
 import LogoPost from '../../asset/about me.jpg'
 import Spinner from '../Spinner/Spinner'
-import { useParams, useNavigate, Link } from 'react-router-dom'
+import { useParams, Link } from 'react-router-dom'
 import moment from 'moment'
 import { apiBlog } from '../../apis/axios'
 
 const PostSingle = ({ blog, isLoading, user }) => {
     const { blogId } = useParams()
-    const navigate = useNavigate()
 
     const handleDeleteBlog = async () => {
         await apiBlog.delete(`/${blogId}`)
-        navigate('/')
     }
 
     if (isLoading || !blog) return (
@@ -36,7 +34,9 @@ const PostSingle = ({ blog, isLoading, user }) => {
             {(user?.data?.username || user?.data?.name) === blog.username && (
                 <div className="singlePostEdit">
                     <Link to={`/blog/edit/${blogId}`}><i className="singlePostIcon far fa-edit"></i></Link>
-                    <i className="singlePostIcon far fa-trash-alt" onClick={handleDeleteBlog}></i>
+                    <Link to={'/'}>
+                        <i className="singlePostIcon far fa-trash-alt" onClick={handleDeleteBlog}></i>
+                    </Link>
                 </div>
             )} 
         </div>

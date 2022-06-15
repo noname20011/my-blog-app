@@ -1,19 +1,12 @@
 import React, { useState } from 'react'
 import { useEffect } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+    import { Link } from 'react-router-dom'
 import { FcMenu } from 'react-icons/fc'
 import { AiOutlineCloseCircle  } from 'react-icons/ai'
 import './Topbar.css'
 
 const Topbar = ({ user }) => {
-    const navigate = useNavigate()
     const [isShowOption, setIsShowOption] = useState(false)
-    const [isShowMenu, setIsShowMenu] = useState(true)
-
-    const logout = () => {
-        localStorage.clear()
-        navigate('/login')
-    }
 
     const hideMenu = (e) => {
         const sidebar = document.querySelector('.topbar_wrapper')
@@ -59,7 +52,9 @@ const Topbar = ({ user }) => {
                             {isShowOption && (
                                 <div className='option'>
                                     <ul>
-                                        <li onClick={logout}>Logout</li>
+                                        <Link to={'/login'}>
+                                            <li onClick={() => localStorage.clear()}>Logout</li>
+                                        </Link>
                                     </ul>
                                 </div>
                             )}
